@@ -30,7 +30,7 @@ class Form extends Component {
 		this.handleDescription        = this.handleDescription.bind(this);
 	}
 
-	componenDidMount() {
+	componentDidMount() {
 		fetch('./fake_db.json')
 			.then(res => res.json())
 			.then( data => {
@@ -46,6 +46,8 @@ class Form extends Component {
 					description : data.description //desc
 				});
 			});
+
+		console.log('loaded');
 	}
 
 	handleFormSubmit(e){

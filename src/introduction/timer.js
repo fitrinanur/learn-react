@@ -3,20 +3,21 @@ import '../App.css';
 
 class Timer extends Component { 
 
-	getInitialState() {
-		return {secElapsed: 0};
+	constructor(props) {
+		super(props);
+		this.state = {
+			secElapsed: 0
+		}
 	}
 
 	componentDidMount() {
-		this.interval = setInterval(this.tick, 1000);
+		this.interval = setInterval( () => {
+			this.setState({secElapsed: this.state.secElapsed + 1});
+		}, 1000);
 	}
 
 	componentWillUnmount() {
 		clearInterval(this.interval);
-	}
-
-	tick() {
-		this.setState({secElapsed: this.state.secElapsed + 1});
 	}
 
 	render() {
