@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
 import '../App.css';
 
-let Timer = React.createClass({
-	getInitialState: function() {
+class Timer extends Component { 
+
+	getInitialState() {
 		return {secElapsed: 0};
-	},
-	componentDidMount: function() {
+	}
+
+	componentDidMount() {
 		this.interval = setInterval(this.tick, 1000);
-	},
+	}
 
-	componentWillUnmount: function() {
+	componentWillUnmount() {
 		clearInterval(this.interval);
-	},
-	tick: function() {
-		this.setState({secElapsed: this.state.secElapsed + 1});
-	},
+	}
 
-	render: function() {
+	tick() {
+		this.setState({secElapsed: this.state.secElapsed + 1});
+	}
+
+	render() {
 		return (
 			<div>Detik terlewati: {this.state.secElapsed}</div>
 		);
 	}
-});
+};
 export default Timer;

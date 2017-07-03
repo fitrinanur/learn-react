@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Select = (props) => (
 	<div className="form-group">
@@ -20,11 +21,11 @@ const Select = (props) => (
 );
 
 Select.PropTypes = {
-	name : React.PropTypes.string.isRequired,
-	options : React.PropTypes.array.isRequired,
-	selectedOption : React.PropTypes.string.isRequired,
-	controlFunc : React.PropTypes.func.bind(),
-	placeholder : React.PropTypes.string.isRequired,
+	name : PropTypes.string.isRequired,
+	options : PropTypes.array.isRequired,
+	selectedOption : PropTypes.string.isRequired,
+	controlFunc : PropTypes.func.bind(),
+	placeholder : PropTypes.string.isRequired,
 };
 
 export default Select;

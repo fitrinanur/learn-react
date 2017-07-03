@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SingleInput from '../component/singleinput';
+import SingleInput from '../component/singleInput';
 import Select from '../component/select'
-import CheckboxOrRadioGrup from '../component/checkboxorradiobutton';
+import CheckboxOrRadioGrup from '../component/checkboxOrRadioButton';
 import TextArea from '../component/textarea';
 import '../App.css';
 
@@ -13,6 +13,7 @@ class Form extends Component {
 			donationSelection: [],
 			selectedDonation: [],
 			typeDonation: [],
+			followInfoDonation: [],
 			selectedTypeDonation: '',
 			InfoDonation: [],
 			selectedInfoDonation: [],
@@ -28,7 +29,8 @@ class Form extends Component {
 		this.handleCurrentDonation    = this.handleCurrentDonation.bind(this);
 		this.handleDescription        = this.handleDescription.bind(this);
 	}
-	componenDidMount(){
+
+	componenDidMount() {
 		fetch('./fake_db.json')
 			.then(res => res.json())
 			.then( data => {
@@ -57,6 +59,7 @@ class Form extends Component {
 			description: this.state.description
 		};
 
+		console.log(formPayload);
 	}
 
 	handleClearForm(e){
@@ -105,9 +108,6 @@ class Form extends Component {
 
 	handleDescription(e){
 		const textArray = e.target.value.split('').filter(x => x !== 'e');
-
-		console.log('string split into array of letters',textArray);
-
 		const filteredText = textArray.join('');
 		this.setState({ description: filteredText });
 		this.setState({ description: e.target.value }, () => console.log('description', this.state.description));
@@ -121,7 +121,7 @@ class Form extends Component {
 					inputType={'text'}
 					title={'Full name'}
 					name={'name'}
-					controlFunc={this.handleDonorsNameChange}
+					controlFunc={this.handleDonorsName}
 					content={this.state.donorsName}
 					placeholder={'Type donors name here'} />
 				<Select
@@ -157,7 +157,7 @@ class Form extends Component {
 					resize={false}
 					content={this.state.description}
 					name={'currentPetInfo'}
-					controlFunc={this.handleDescriptionChange}
+					controlFunc={this.handleDescription}
 					placeholder={'Please be thorough in your descriptions'} />
 				<input
 					type="submit"
