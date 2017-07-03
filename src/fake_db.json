@@ -1,6 +1,6 @@
 {
   "donorsName": "",
-  "donationSelection": ["money", "clothes", "balnkets", "food", "drink", "books", "uniform", "mixed item"],
+  "donationSelection": ["money", "clothes", "blankets", "food", "drink", "books", "uniform", "mixed item"],
   "selectedDonation": ["money", "uniform", "books"],
   "typeDonation": ["individual", "group", "community"],
   "ownerTypeDonation": "",

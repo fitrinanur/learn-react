@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import SingleInput from './component/singleinput';
-import Select from './component/select'
-import CheckboxOrRadioGrup from './component/checkboxorradiobutton';
-import TextArea from './component/textarea';
-import './App.css';
+import SingleInput from '../component/singleinput';
+import Select from '../component/select'
+import CheckboxOrRadioGrup from '../component/checkboxorradiobutton';
+import TextArea from '../component/textarea';
+import '../App.css';
 
 class Form extends Component {
 	constructor(props){
@@ -13,20 +13,20 @@ class Form extends Component {
 			donationSelection: [],
 			selectedDonation: [],
 			typeDonation: [],
-			ownerTypeDonation: '',
-			followInfoDonation: [],
+			selectedTypeDonation: '',
+			InfoDonation: [],
 			selectedInfoDonation: [],
-			curretDonation: 0,
+			currentDonation: 0,
 			description: ''
 		};
-		this.handleFormSubmit = this.handleFormSubmit.bind(this);
-		this.handleClearForm = this.handleClearForm.bind(this);
-		this.handleDonorsNameChange = this.handleDonorsNameChange.bind(this);
-		this.handleTypeDonation = this.handleTypeDonation.bind(this);
-		this.handleDonationSelection = this.handleDonationSelection.bind(this);
-		this.handleInfoDonation = this.handleInfoDonation.bind(this);
-		this.handleCurrentDonation = this.handleCurrentDonation.bind(this);
-		this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
+		this.handleFormSubmit         = this.handleFormSubmit.bind(this);
+		this.handleClearForm          = this.handleClearForm.bind(this);
+		this.handleDonorsName         = this.handleDonorsName.bind(this);
+		this.handleTypeDonation       = this.handleTypeDonation.bind(this);
+		this.handleDonationSelection  = this.handleDonationSelection.bind(this);
+		this.handleInfoDonation       = this.handleInfoDonation.bind(this);
+		this.handleCurrentDonation    = this.handleCurrentDonation.bind(this);
+		this.handleDescription        = this.handleDescription.bind(this);
 	}
 	componenDidMount(){
 		fetch('./fake_db.json')
@@ -72,7 +72,7 @@ class Form extends Component {
 
 	}
 
-	handleDonorsNameChange(e){
+	handleDonorsName(e){
 		this.setState({
 			donorsName: e.target.value
 		});
@@ -103,7 +103,7 @@ class Form extends Component {
 		this.setState({ currentDonation: e.target.value }, () => console.log('Donation count', this.state.currentDonation));
 	}
 
-	handleDescriptionChange(e){
+	handleDescription(e){
 		const textArray = e.target.value.split('').filter(x => x !== 'e');
 
 		console.log('string split into array of letters',textArray);

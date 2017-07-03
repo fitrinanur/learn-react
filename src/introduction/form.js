@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FormContainer from './formContainer';
-import './App.css';
+import '../App.css';
 
 class Form extends Component {
 	render(){
@@ -8,7 +8,7 @@ class Form extends Component {
 			<div className="container">
 				<div className="columns">
 					<div className="col-md-9 centered">
-						<h3>React.js Controlled Form Components</h3>
+						<h3>React JS controlled Form Component</h3>
 						<FormContainer />
 					</div>
 				</div>

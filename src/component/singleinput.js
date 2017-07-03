@@ -23,7 +23,7 @@ const Singleinput = (props) => (
 				React.PropTypes.string,
 				React.PropTypes.number,
 			]
-		),
+		).isRequired,
 		controlFunc : React.PropTypes.func.isRequired,
 		placeholder : React.PropTypes.string,
 	};

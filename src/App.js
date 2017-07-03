@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {Switch, Route, Link} from 'react-router-dom';
-import Hello from './hello';
-import Counter from './counter';
-import Timer from './timer';
-import Form from './form';
+import Hello from './introduction/hello';
+import Counter from './introduction/counter';
+import Timer from './introduction/timer';
+import Form from './introduction/form';
 import './App.css';
 class Header extends Component {
   render(){
