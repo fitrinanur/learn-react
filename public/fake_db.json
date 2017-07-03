@@ -1,0 +1,11 @@
+{
+  "donorsName": "",
+  "donationSelection": ["money", "clothes", "balnkets", "food", "drink", "books", "uniform", "mixed item"],
+  "selectedDonation": ["money", "uniform", "books"],
+  "typeDonation": ["individual", "group", "community"],
+  "ownerTypeDonation": "",
+  "followInfoDonation": ["yes", "no"],
+  "selectedInfoDonation": ["yes"],
+  "curretDonation": 0,
+  "description": ""
+}
