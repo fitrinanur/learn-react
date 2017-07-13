@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SingleInput from '../component/singleInput';
+import SingleInput from '../component/singleinput';
 import Select from '../component/select'
-import CheckboxOrRadioGrup from '../component/checkboxOrRadioButton';
+import CheckboxOrRadioGrup from '../component/checkboxorradiobutton';
 import TextArea from '../component/textarea';
 import '../App.css';
 
@@ -117,19 +117,21 @@ class Form extends Component {
 
 	render(){
 		return (
-			<form className="container" onSubmit={this.handleFormSubmit}>
-				<h5>Donation Form</h5>
+			<form className="donation_form" onSubmit={this.handleFormSubmit}>
+				<h3>Donation Form</h3>
 				<SingleInput
 					inputType={'text'}
-					title={'Full name'}
+					title={'What is Your Name?'}
 					name={'name'}
 					controlFunc={this.handleDonorsName}
 					content={this.state.donorsName}
 					placeholder={'Type donors name here'} />
+				<p>Choose your type donation here :</p>
 				<Select
+					title={'Choose your type donation'}
 					name={'typeDonation'}
-					placeholder={'Choose your type  donation'}
-					controlFunc={this.handleTypeDonationt}
+					placeholder={'Type  Donation'}
+					controlFunc={this.handleTypeDonation}
 					options={this.state.typeDonation}
 					selectedOption={this.state.ownerTypeDonation} />
 				<CheckboxOrRadioGrup
@@ -140,7 +142,7 @@ class Form extends Component {
 					options={this.state.donationSelection}
 					selectedOptions={this.state.selectedDonation} />
 				<CheckboxOrRadioGrup
-					title={'Do you want received info for another donation?'}
+					title={'Follow new information about this donation? '}
 					setName={'donation'}
 					controlFunc={this.handleInfoDonation}
 					type={'radio'}
@@ -148,13 +150,13 @@ class Form extends Component {
 					selectedOptions={this.state.selectedInfoDonation} />
 				<SingleInput
 					inputType={'number'}
-					title={'How many times current donation?'}
+					title={'Your current donation?'}
 					name={'currentDonation'}
 					controlFunc={this.handleCurrentDonation}
 					content={this.state.currentDonation}
 					placeholder={'Enter number of current donation'} />
 				<TextArea
-					title={'Give us describtion about you'}
+					title={'Give us your Critic and Suggestion here :'}
 					rows={5}
 					resize={false}
 					content={this.state.description}

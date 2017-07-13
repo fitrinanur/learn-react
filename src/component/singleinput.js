@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Singleinput = (props) => (
+const SingleInput = (props) => (
 		<div className="form-group">
 			<label className="form-label">{props.title}</label>
 			<input
-				className = "form-input"
+				className = "form-control"
 				type = {props.inputType}
 				name = {props.name}
 				value = {props.content}
@@ -15,7 +15,7 @@ const Singleinput = (props) => (
 		</div>
 );
 
-	Singleinput.propTypes = {
+	SingleInput.propTypes = {
 		inputType: PropTypes.oneOf(['text','number']).isRequired,
 		title : PropTypes.string.isRequired,
 		name : PropTypes.string.isRequired,
@@ -29,4 +29,4 @@ const Singleinput = (props) => (
 		placeholder : PropTypes.string,
 	};
 
-export default Singleinput;
+export default SingleInput;

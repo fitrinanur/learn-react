@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Jquery from 'jquery';
 
 class Timer extends Component { 
 
@@ -22,7 +23,9 @@ class Timer extends Component {
 
 	render() {
 		return (
-			<div>Detik terlewati: {this.state.secElapsed}</div>
+			<div className="timer">
+				<div><h3>Detik terlewati:</h3> <h1>{this.state.secElapsed}</h1></div>
+			</div>
 		);
 	}
 };
