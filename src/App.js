@@ -33,7 +33,7 @@ class Main extends Component {
           <Route path='/counter' component={Counter}/>
           <Route path='/timer' component={Timer}/>
           <Route path='/form' component={Form}/>
-          <Route path='./olahdata' component={Olahdata}/>
+          <Route path='/olahdata' component={Olahdata}/>
         </Switch>
       </main>
     );

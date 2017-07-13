@@ -6,9 +6,10 @@ import Itemdisplay from "./itemdisplay";
 class Olahdata extends Component {
 	constructor(props){
 		super(props);
-		return {data : []};
+		this.state = {data : []};
 	}
-	render(){
+
+	render() {
 		let items = this.state.data.map(function(item, index) {
 			return (
 				<Itemdisplay key={index} data={item}/>
@@ -16,22 +17,20 @@ class Olahdata extends Component {
 		});
 		return (
 			<div>
-				{items.length > 0 ? '' : 'memuat...'}
-				{items}
+				 {items.length > 0 ? '' : 'memuat...'} 
+				 {items} 
 			</div>
 		);
 	}
+
 	componentDidMount(){
 		$.ajax({
 			url: 'https://jsonplaceholder.typicode.com/users',
-			dataType: 'json',
-			cache: false,
-			success: function(data) {
+			success: (data) => {
 				this.setState({data: data});
-			}.bind(this)
+			}
 		});
 	}
-
 }
 
 export default Olahdata;

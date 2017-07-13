@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SingleInput from '../component/singleinput';
 import Select from '../component/select'
-import CheckboxOrRadioGrup from '../component/checkboxorradiobutton';
+import CheckboxOrRadioGrup from '../component/checkboxOrRadioButton';
 import TextArea from '../component/textarea';
 import '../App.css';
 

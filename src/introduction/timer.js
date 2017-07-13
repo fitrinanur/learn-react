@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../App.css';
-import Jquery from 'jquery';
 
 class Timer extends Component { 
 
