@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SingleInput from '../component/singleinput';
 import Select from '../component/select'
-import CheckboxOrRadioGrup from '../component/checkboxOrRadioButton';
+import CheckboxOrRadioGrup from '../component/checkboxorradiobutton';
 import TextArea from '../component/textarea';
 import '../App.css';
 
@@ -15,7 +15,7 @@ class Form extends Component {
 			typeDonation: [],
 			followInfoDonation: [],
 			selectedTypeDonation: '',
-			InfoDonation: [],
+			InfoDonatioNn: [],
 			selectedInfoDonation: [],
 			currentDonation: 0,
 			description: ''
@@ -69,7 +69,7 @@ class Form extends Component {
 		this.setState({
 			donorsName :'',
 			selectedDonation :[],
-			ownerTypeDonation :'',
+			ownerTypeDonation :[],
 			selectedInfoDonation :[],
 			currentDonation :0,
 			description:'',
